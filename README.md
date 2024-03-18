@@ -2,7 +2,7 @@
 # Testing Classes on a DataFrame
 
 
-1. **DataPreprocessing**: This module likely contains functions or classes for preparing your raw data for analysis. This can include tasks such as handling missing values, encoding categorical variables, scaling numerical features, and splitting the data into training and testing sets.
+1. **[DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataExploration.py)**: This module likely contains functions or classes for preparing your raw data for analysis. This can include tasks such as handling missing values, encoding categorical variables, scaling numerical features, and splitting the data into training and testing sets.
 
 2. **DataExploration**: This part of your pipeline focuses on understanding the structure and characteristics of your dataset. It might include functions or classes for displaying basic statistics (like mean, median, standard deviation), visualizations (like histograms, scatter plots, or correlation matrices), and checking for any anomalies or inconsistencies in the data.
 
