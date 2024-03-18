@@ -1,5 +1,5 @@
-# taskes
-# Testing Classes on a DataFrame
+# Neural Network trained on a simple dataset "https://github.com/imadmlf/taskes/blob/main/cancer_classification.csv"
+## Testing Classes on a DataFrame
 
 
 1. **[DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py)**: This module likely contains functions or classes for preparing your raw data for analysis. This can include tasks such as handling missing values, encoding categorical variables, scaling numerical features, and splitting the data into training and testing sets.
@@ -22,11 +22,11 @@ from ModelTraining import ModelTraining
 from neural_network import NeuralNetwork
 import torch
 ```
-# Read the dataset
+## Read the dataset
 ```python
 df = pd.read_csv('cancer_classification.csv')
 ```
-# Test the [DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py) class
+## Test the [DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py) class
 The `preprocessor` object is created using the `[DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py)` class, which prepares the data for training a machine learning model. After splitting the data into training and testing sets using the `split_data()` method, it normalizes the data with `normalize_data()`. Finally, it converts the data into tensors with `tensorize_data()`, ready for model training and evaluation.
 ```python
 preprocessor = DataPreprocessing(df)
@@ -34,7 +34,7 @@ x_train, x_test, y_train, y_test = preprocessor.split_data(test_size=0.2, random
 x_train, x_test = preprocessor.normalize_data()
 x_train_tensor, x_test_tensor, y_train_tensor, y_test_tensor = preprocessor.tensorize_data()
 ```
-# Test the [DataExploration](https://github.com/imadmlf/taskes/blob/main/DataExploration.py) class
+## Test the [DataExploration](https://github.com/imadmlf/taskes/blob/main/DataExploration.py) class
 
 
 -  `DisplayData()`: Displays the head of the DataFrame.
@@ -85,7 +85,7 @@ explorer.DisplayCorrelationWithColumn('benign_0__mal_1')
 print("\nHeatMap")
 explorer.DisplayHeatMap()
 ```
-# Testing the [NeuralNetwork](https://github.com/imadmlf/taskes/blob/main/neural_network.py) class
+## Testing the [NeuralNetwork](https://github.com/imadmlf/taskes/blob/main/neural_network.py) class
 
 This code snippet tests the `NeuralNetwork` class. It calculates the number of input features by subtracting 1 from the total number of columns in the DataFrame (`df`). Then, it instantiates a `neural_net` object using the `NeuralNetwork` class, passing the calculated number of input features. Finally, it prints the architecture of the neural network by displaying the `neural_net` object.
 ```python
@@ -94,7 +94,7 @@ neural_net = NeuralNetwork(input_features)
 print("Neural Network Architecture:")
 print(neural_net)
 ```
-# Testing the [ModelTraining](https://github.com/imadmlf/taskes/blob/main/modeltrainer.py) class
+## Testing the [ModelTraining](https://github.com/imadmlf/taskes/blob/main/modeltrainer.py) class
 
 This code snippet instantiates a neural network model (`model`) using the `NeuralNetwork` class, specifying the number of input features. It defines a binary cross-entropy loss function (`criterion`) and a stochastic gradient descent optimizer (`optimizer`) to train the model. 
 
@@ -106,7 +106,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 trainer = ModelTraining(model, criterion, optimizer)
 train_losses, test_losses = trainer.train(x_train_tensor, y_train_tensor, x_test_tensor, y_test_tensor, epochs=600)
 ```
-# Testing the [ModelEvaluation](https://github.com/imadmlf/taskes/blob/main/ModelEvaluation.py) class
+## Testing the [ModelEvaluation](https://github.com/imadmlf/taskes/blob/main/ModelEvaluation.py) class
 This code snippet evaluates the trained neural network model (`model`) using the `ModelEvaluation` class. First, it sets the model to evaluation mode using `model.eval()`. Then, it generates predictions (`y_pred`) for the test data (`x_test_tensor`) using the trained model. The predictions are thresholded at 0.5 to convert probabilities to binary predictions.
 
 Next, it prints the confusion matrix, classification report, and accuracy score using the `confusion_matrix()`, `classification_report()`, and `accuracy_score()` methods of the `evaluator` object, respectively.
