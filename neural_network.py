@@ -12,12 +12,12 @@ import torch
 from torch import nn
 
 class NeuralNetwork(nn.Module):
-    def __init__(self, input_features):
+    def __init__(self, input_features,out_features):
         super(NeuralNetwork, self).__init__()
         # Define the architecture of the network
         self.fc1 = nn.Linear(input_features, 30) 
         self.fc2 = nn.Linear(30, 15)
-        self.fc3 = nn.Linear(15, 1)
+        self.fc3 = nn.Linear(15, out_features)
         self.relu = nn.ReLU()
         self.sigmoid = nn.Sigmoid()
 
