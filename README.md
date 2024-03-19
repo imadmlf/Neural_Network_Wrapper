@@ -97,9 +97,9 @@ print(neural_net)
 ```
 ## Testing the [ModelTraining](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/modeltrainer.py) class
 
-This code snippet instantiates a neural network model (`model`) using the `NeuralNetwork` class, specifying the number of input features. It defines a binary cross-entropy loss function (`criterion`) and a stochastic gradient descent optimizer (`optimizer`) to train the model. 
+This code snippet instantiates a neural network model (`model`) using the [NeuralNetwork](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/neural_network.py) class, specifying the number of input features. It defines a binary cross-entropy loss function (`criterion`) and a stochastic gradient descent optimizer (`optimizer`) to train the model. 
 
-Then, it creates a `trainer` object using the `ModelTraining` class, passing the model, criterion, and optimizer as arguments. Finally, it trains the model using the `train()` method of the `trainer` object, passing the training and testing data tensors (`x_train_tensor`, `y_train_tensor`, `x_test_tensor`, `y_test_tensor`) and specifying the number of epochs (600).
+Then, it creates a `trainer` object using the [ModelTraining](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/modeltrainer.py) class, passing the model, criterion, and optimizer as arguments. Finally, it trains the model using the `train()` method of the `trainer` object, passing the training and testing data tensors (`x_train_tensor`, `y_train_tensor`, `x_test_tensor`, `y_test_tensor`) and specifying the number of epochs (600).
 ```python
 model = NeuralNetwork(input_features)
 criterion = nn.BCELoss() 
@@ -108,7 +108,7 @@ trainer = ModelTraining(model, criterion, optimizer)
 train_losses, test_losses = trainer.train(x_train_tensor, y_train_tensor, x_test_tensor, y_test_tensor, epochs=600)
 ```
 ## Testing the [ModelEvaluation](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/ModelEvaluation.py) class
-This code snippet evaluates the trained neural network model (`model`) using the `ModelEvaluation` class. First, it sets the model to evaluation mode using `model.eval()`. Then, it generates predictions (`y_pred`) for the test data (`x_test_tensor`) using the trained model. The predictions are thresholded at 0.5 to convert probabilities to binary predictions.
+This code snippet evaluates the trained neural network model (`model`) using the [ModelEvaluation](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/ModelEvaluation.py) class. First, it sets the model to evaluation mode using `model.eval()`. Then, it generates predictions (`y_pred`) for the test data (`x_test_tensor`) using the trained model. The predictions are thresholded at 0.5 to convert probabilities to binary predictions.
 
 Next, it prints the confusion matrix, classification report, and accuracy score using the `confusion_matrix()`, `classification_report()`, and `accuracy_score()` methods of the `evaluator` object, respectively.
 
