@@ -1,4 +1,4 @@
-# Neural Network trained on a simple  [dataset](https://github.com/imadmlf/taskes/blob/main/cancer_classification.csv)
+# Neural Network Wrapper (trained on a simple)  [dataset](https://github.com/imadmlf/taskes/blob/main/cancer_classification.csv)
 ## Testing Classes on a DataFrame
 
 
