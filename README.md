@@ -44,44 +44,44 @@ explorer = DataExploration(df)
 print("DataFrame Head")
 explorer.DisplayData()
 ```
-- `DisplayDataTypes()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the data types of columns in the DataFrame.
+- [DisplayDataTypes()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the data types of columns in the DataFrame.
 ```python
 print("\nData Types")
 explorer.DisplayDataTypes()
 ```
-- `DisplayDataInfo()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays general information about the DataFrame.
+- [DisplayDataInfo()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays general information about the DataFrame.
 ```python
 print("\nData Info")
 explorer.DisplayDataInfo()
 ```
-- `DisplayDataDescription()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays statistical descriptions of the data.
+- [DisplayDataDescription()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays statistical descriptions of the data.
 ```python
 print("\nData Description")
 explorer.DisplayDataDescription()
 ```
-- `DisplayDataShape()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the shape of the DataFrame.
+- [DisplayDataShape()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the shape of the DataFrame.
 ```python
 print("\nData Shape")
 explorer.DisplayDataShape()
 ```
-- `DisplayMissingValues()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays information about missing values in the DataFrame.
+- [DisplayMissingValues()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays information about missing values in the DataFrame.
 ```python
 print("\nMissing Values")
 explorer.DisplayMissingValues()
 ```
-- `DisplayCorrelationMatrix()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the correlation matrix of numerical features in the DataFrame.
+- [DisplayCorrelationMatrix()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the correlation matrix of numerical features in the DataFrame.
 ```python
 print("\nCorrelation Matrix")
 explorer.DisplayCorrelationMatrix()
 ```
-- `DisplayCorrelationWithColumn('benign_0__mal_1')[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the correlation of all features with the target column named `'benign_0__mal_1'`.
+- [DisplayCorrelationWithColumn('benign_0__mal_1')](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays the correlation of all features with the target column named `'benign_0__mal_1'`.
 ```python
 
 print("\nCorrelation with 'target' column:")
 explorer.DisplayCorrelationWithColumn('benign_0__mal_1')
 ```
 
-- `DisplayHeatMap()[DisplayData()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays a heatmap of the correlation matrix.
+- [DisplayHeatMap()](https://github.com/imadmlf/taskes/Neural_Network_Wrapper/main/DataExploration.py#LX): Displays a heatmap of the correlation matrix.
 ```python
 print("\nHeatMap")
 explorer.DisplayHeatMap()
