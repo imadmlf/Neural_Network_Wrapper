@@ -1,5 +1,5 @@
-# Neural Network Wrapper (trained on a simple)  [dataset](https://github.com/imadmlf/taskes/blob/main/cancer_classification.csv)
-## Testing Classes on a DataFrame
+# Neural Network Wrapper [dataset](https://github.com/imadmlf/taskes/blob/main/cancer_classification.csv)
+## Training on a simple dataset
 
 
 1. **[DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py)**: This module likely contains functions or classes for preparing your raw data for analysis. This can include tasks such as handling missing values, encoding categorical variables, scaling numerical features, and splitting the data into training and testing sets.
