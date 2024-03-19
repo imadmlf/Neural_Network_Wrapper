@@ -38,7 +38,7 @@ x_train_tensor, x_test_tensor, y_train_tensor, y_test_tensor = preprocessor.tens
 ## Test the [DataExploration](https://github.com/imadmlf/taskes/blob/main/DataExploration.py) class
 
 
--  `DisplayData()`: Displays the head of the DataFrame.
+-  `[DisplayData()](https://github.com/imadmlf/taskes/blob/main/DataExploration.py#LX): Displays the head of the DataFrame.
 ```python
 explorer = DataExploration(df)
 print("DataFrame Head")
