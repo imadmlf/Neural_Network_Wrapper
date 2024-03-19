@@ -28,7 +28,7 @@ df = pd.read_csv('cancer_classification.csv')
 ```
 ## Test the [DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py) class
 The `preprocessor` object is created using the [DataPreprocessing](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py) class, which prepares the data for training a machine learning model. After splitting the data into training and testing sets using the [split_data()](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py#LX) 
-method, it normalizes the data with `normalize_data()`. Finally, it converts the data into tensors with `tensorize_data()`, ready for model training and evaluation.
+method, it normalizes the data with [normalize_data()](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py#LX). Finally, it converts the data into tensors with [tensorize_data()](https://github.com/imadmlf/taskes/blob/main/DataPreprocessing.py#LX), ready for model training and evaluation.
 ```python
 preprocessor = DataPreprocessing(df)
 x_train, x_test, y_train, y_test = preprocessor.split_data(test_size=0.2, random_state=42)
