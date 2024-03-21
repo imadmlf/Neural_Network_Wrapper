@@ -91,7 +91,8 @@ explorer.DisplayHeatMap()
 This code snippet tests the [NeuralNetwork](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/neural_network.py) class. It calculates the number of input features by subtracting 1 from the total number of columns in the DataFrame (`df`). Then, it instantiates a `neural_net` object using the `NeuralNetwork` class, passing the calculated number of input features. Finally, it prints the architecture of the neural network by displaying the `neural_net` object.
 ```python
 input_features = len(df.columns) - 1
-neural_net = NeuralNetwork(input_features)
+out_features=df['benign_0__mal_1'].unique().sum()
+neural_net = NeuralNetwork(input_features,out_features)
 print("Neural Network Architecture:")
 print(neural_net)
 ```
@@ -101,12 +102,17 @@ This code snippet instantiates a neural network model (`model`) using the [Neura
 
 Then, it creates a `trainer` object using the [ModelTraining](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/modeltrainer.py) class, passing the model, criterion, and optimizer as arguments. Finally, it trains the model using the `train()` method of the `trainer` object, passing the training and testing data tensors (`x_train_tensor`, `y_train_tensor`, `x_test_tensor`, `y_test_tensor`) and specifying the number of epochs (600).
 ```python
-model = NeuralNetwork(input_features)
+from torch import nn
+model = neural_net
 criterion = nn.BCELoss() 
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01) 
-trainer = ModelTraining(model, criterion, optimizer)
+```
+```python
+from modeltrainer import ModelTrainer
+trainer = ModelTrainer(model, criterion, optimizer)
 train_losses, test_losses = trainer.train(x_train_tensor, y_train_tensor, x_test_tensor, y_test_tensor, epochs=600)
 ```
+
 ## Testing the [ModelEvaluation](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/ModelEvaluation.py) class
 This code snippet evaluates the trained neural network model (`model`) using the [ModelEvaluation](https://github.com/imadmlf/Neural_Network_Wrapper/blob/main/ModelEvaluation.py) class. First, it sets the model to evaluation mode using `model.eval()`. Then, it generates predictions (`y_pred`) for the test data (`x_test_tensor`) using the trained model. The predictions are thresholded at 0.5 to convert probabilities to binary predictions.
 
